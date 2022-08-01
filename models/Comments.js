@@ -1,0 +1,1 @@
+//modelo de los comentarios xd
