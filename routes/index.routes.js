@@ -1,6 +1,8 @@
 const router = require("express").Router();
 const authRoutes = require("./auth.routes");
 const BooksRoutes = require("./books.routes")
+const PublicationsRoutes = require("./publication.routes")
+const CommentsRoutes = require("./comments.routes")
 
 /* GET home page */
 router.get("/", (req, res, next) => {
@@ -8,7 +10,9 @@ router.get("/", (req, res, next) => {
 });
 
 router.use("/auth", authRoutes);
-router.use("/libros", BooksRoutes)
+router.use("/libros", BooksRoutes);
+router.use("/publications", PublicationsRoutes);
+router.use("/comments", CommentsRoutes);
 
 module.exports = router;
 

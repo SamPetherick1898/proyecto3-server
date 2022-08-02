@@ -8,8 +8,6 @@ router.get("/", (req, res) => {
     }).catch(console.log)
 })
 
-
-//post
 //CREATE
 router.route('/create-book').post((req, res, next) => {
   Books.create(req.body, (error, data) => {
@@ -26,6 +24,7 @@ router.route('/create-book').post((req, res, next) => {
 
 //Edit
 
+/*
 router.get("/r", async (req, res, next) =>{
   const details = await Drink.findById(req.params.id)
   const details2 = await Pastry.findById(req.params.id)
@@ -36,7 +35,7 @@ router.get("/r", async (req, res, next) =>{
     oc = { ...details2._doc}
   }
   res.render("id", oc)
-})
+})*/
 
 //Delete
 

@@ -17,7 +17,8 @@ const PublicationsSchema = new Schema({
     image: {
         img: "",
         required: false 
-    }
+    },
+    comments: [{ type: Schema.Types.ObjectId, ref: "Comments" }]
 }, { timestamps: true })
 
 module.exports = mongoose.model("Publications", PublicationsSchema)
