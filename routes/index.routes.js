@@ -10,7 +10,7 @@ router.get("/", (req, res, next) => {
 });
 
 router.use("/auth", authRoutes);
-router.use("/libros", BooksRoutes);
+router.use("/books", BooksRoutes);
 router.use("/publications", PublicationsRoutes);
 router.use("/comments", CommentsRoutes);
 

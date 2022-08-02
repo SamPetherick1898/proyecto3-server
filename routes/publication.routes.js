@@ -20,7 +20,6 @@ router.post("/post-new", (req, res) => {
     }).catch(console.log)
 })
 
-//pendiente de probar en Postman
 //put
 router.put("/edit/:Id", (req, res) =>{
     const { Id } = req.params
@@ -28,7 +27,7 @@ router.put("/edit/:Id", (req, res) =>{
     .then(newEdit =>{
         res.json(newEdit)
     }).catch(console.log)
-})//pendiente
+})
 
 //delete
 router.delete("/delete/:Id", (req, res) =>{
