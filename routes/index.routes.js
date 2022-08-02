@@ -8,7 +8,7 @@ router.get("/", (req, res, next) => {
 });
 
 router.use("/auth", authRoutes);
-router.use("/Libros", BooksRoutes)
+router.use("/libros", BooksRoutes)
 
 module.exports = router;
 

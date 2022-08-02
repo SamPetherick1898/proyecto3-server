@@ -10,7 +10,6 @@ const BooksSchema = new Schema({
     },
     url: {
         type: String,
-        default: "",
         minLength: 5
     },
     pages: {

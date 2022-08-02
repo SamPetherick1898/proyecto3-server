@@ -5,12 +5,32 @@ const userSchema = new Schema(
   {
     username: {
       type: String,
+      required: true,
+      unique: true
       // unique: true -> Ideally, should be unique, but its up to you
     },
     rol: {
       type: String,
+      required: true,
+      enum: ["usuario", "administrador"]
     },
-    password: String,
+    url: {
+      type: String,
+      required: true,
+      default: "https://cdn3.iconfinder.com/data/icons/essential-rounded/64/Rounded-31-512.png"
+    },
+    email:{
+      type: String,
+      required: true,
+      unique: true
+    },
+    password: {
+      type: String,
+      required: true,
+      trim: true,
+      minLength: 2
+    },
+    comments: [{ type: Schema.Types.ObjectId, ref: "Comments" }]
   },
   {
     // this second object adds extra properties: `createdAt` and `updatedAt`
