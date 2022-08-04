@@ -26,7 +26,7 @@ router.route('/post-book').post((req, res, next) => {
 //put
 router.put("/edit/:Id", (req, res) =>{
     const { Id } = req.params
-    Comments.findByIdAndUpdate(Id, req.body)
+    Books.findByIdAndUpdate(Id, req.body)
     .then(newEdit =>{
         res.json(newEdit)
     }).catch(console.log)

@@ -14,6 +14,7 @@ router.get("/", (req, res) => {
 //post
 router.post("/post-new", (req, res) => {
     const { name, description, image } = req.body
+    console.log(req.body)
     Publications.create({ name, description, image })
     .then(newPublication =>{
         res.json(newPublication)
@@ -36,7 +37,7 @@ router.delete("/delete/:Id", (req, res) =>{
     .then(deletePublication =>{
         res.json(deletePublication)
     }).catch(console.log)
-})//pendiente
+})
 
 
 module.exports = router
