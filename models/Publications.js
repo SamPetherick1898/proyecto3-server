@@ -15,8 +15,7 @@ const PublicationsSchema = new Schema({
         required: true
     },
     image: {
-        img: "",
-        required: false 
+        type: String 
     },
     comments: [{ type: Schema.Types.ObjectId, ref: "Comments" }]
 }, { timestamps: true })

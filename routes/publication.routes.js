@@ -6,7 +6,6 @@ const mongoose = require("mongoose");
 //get
 router.get("/", (req, res) => {
     Publications.find().then( todasLasPublicaciones =>{
-            console.log("xxxxxxxxx",todasLasPublicaciones)
             res.json(todasLasPublicaciones)
     }).catch(console.log)
 })
@@ -14,7 +13,6 @@ router.get("/", (req, res) => {
 //post
 router.post("/post-new", (req, res) => {
     const { name, description, image } = req.body
-    console.log(req.body)
     Publications.create({ name, description, image })
     .then(newPublication =>{
         res.json(newPublication)

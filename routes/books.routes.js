@@ -6,7 +6,6 @@ const mongoose = require("mongoose");
 router.get("/", (req, res) => {
     Books.find()
     .then( todosLosLibros =>{
-        console.log("xxxxxxxxx",todosLosLibros)
          res.json(todosLosLibros)
     }).catch(console.log)
 })
@@ -17,7 +16,6 @@ router.route('/post-book').post((req, res, next) => {
     if (error) {
       return next(error)
     } else {
-      console.log(data)
       res.json(data)
     }
   })

@@ -7,7 +7,6 @@ const mongoose = require("mongoose");
 router.get("/", (req, res) =>{
     Comments.find()
     .then( todosLosComentarios =>{
-        console.log("xxxxxxxxx", todosLosComentarios)
         res.json(todosLosComentarios)
     }).catch(console.log)
 })
