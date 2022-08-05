@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const Books = require("../models/books");
+const Books = require("../models/Books");
 const mongoose = require("mongoose");
 
 //get
